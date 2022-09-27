@@ -1,0 +1,1291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API Documentation &mdash; sensirion_shdlc_svm41 0.1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Quick Start" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sensirion_shdlc_svm41
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#svm41">SVM41</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-sensirion_shdlc_svm41.device">Svm41Device</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sensirion_shdlc_svm41.commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-sensirion_shdlc_svm41.result_types">Result Types</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sensirion_shdlc_svm41</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>API Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="svm41">
+<h1>SVM41<a class="headerlink" href="#svm41" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-sensirion_shdlc_svm41.device">
+<span id="svm41device"></span><h2>Svm41Device<a class="headerlink" href="#module-sensirion_shdlc_svm41.device" title="Permalink to this headline">¶</a></h2>
+<p>The class Svm41DeviceBase implements the low level interface of the sensor.
+The class Svm41Device extends the Svm41DeviceBase. It provides additional functions to ease the use of the
+sensor.</p>
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.device.</code><code class="descname">Svm41DeviceBase</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Low level API implementation of SVM41</p>
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_product_type">
+<code class="descname">get_product_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_product_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_product_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product type from the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return product_type:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Character array containing the product type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_product_name">
+<code class="descname">get_product_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_product_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_product_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product name from the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return product_name:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Character array containing the product name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_serial_number">
+<code class="descname">get_serial_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_serial_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the serial number from the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return serial_number:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Character array containing the serial number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_version">
+<code class="descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the version information for the hardware, firmware and SHDLC protocol.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return firmware_major:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Firmware major version number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return firmware_minor:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Firmware minor version number.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return firmware_debug:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Firmware debug state. If the debug state is set, the firmware is in development.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return hardware_major:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Hardware major version number.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return hardware_minor:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Hardware minor version number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return protocol_major:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Protocol major version number.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return protocol_minor:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Protocol minor version number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.device_reset">
+<code class="descname">device_reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.device_reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.device_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executs a reset on the device.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_system_up_time">
+<code class="descname">get_system_up_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_system_up_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_system_up_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the system up time of the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return system_up_time:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The time since the last power-on or device reset in seconds.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.start_measurement">
+<code class="descname">start_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.start_measurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.start_measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts measurement in polling mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.stop_measurement">
+<code class="descname">stop_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.stop_measurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.stop_measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leaves the measurement mode and returns to the idle mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.read_measured_values_as_integers">
+<code class="descname">read_measured_values_as_integers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.read_measured_values_as_integers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.read_measured_values_as_integers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the new measurement results as integers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return humidity:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Compensated ambient humidity in % RH with a scaling factor of 100.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return temperature:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Compensated ambient temperature in degrees celsius with a scaling of 200.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return voc_index:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">VOC index with a scaling value of 10.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return nox_index:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">NOx index with a scaling value of 10.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.read_measured_raw_values">
+<code class="descname">read_measured_raw_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.read_measured_raw_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.read_measured_raw_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the measured raw values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return raw_humidity:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Uncompensated raw humidity in % RH as read from the SHT40 with a scaling factor
+of 100.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return raw_temperature:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Uncompensated raw temperature in degrees celsius as read from the SHT40 with a
+scaling of 200.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return raw_voc_ticks:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Raw VOC output ticks as read from the SGP sensor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return raw_nox_ticks:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Raw NOx output ticks as read from the SGP sensor.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_temperature_offset_for_rht_measurements">
+<code class="descname">get_temperature_offset_for_rht_measurements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_temperature_offset_for_rht_measurements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_temperature_offset_for_rht_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return t_offset:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Temperature offset which is used for the RHT measurements. Values are in degrees
+celsius with a scaling of 200. Thus the received value must be divided by 200.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_voc_tuning_parameters">
+<code class="descname">get_voc_tuning_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_voc_tuning_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_voc_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currently set parameters for customizing the VOC algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return voc_index_offset:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">VOC index representing typical (average) conditions.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return learning_time_offset_hours:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Time constant to estimate the VOC algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return learning_time_gain_hours:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Time constant to estimate the VOC algorithm gain from the history in hours. Past
+events will be forgotten after about twice the learning time.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gating_max_duration_minutes:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Maximum duration of gating in minutes (freeze of estimator during high VOC index
+signal). Set to zero to disable the gating.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return std_initial:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Initial estimate for standard deviation. Lower value boosts events during
+initial learning period, but may result in larger device-to-device variations.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gain_factor:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Gain factor to amplify or to attenuate the VOC index output.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_nox_tuning_parameters">
+<code class="descname">get_nox_tuning_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_nox_tuning_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_nox_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currently set parameters for customizing the NOx algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return nox_index_offset:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">NOx index representing typical (average) conditions.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return learning_time_offset_hours:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Time constant to estimate the NOx algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return learning_time_gain_hours:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The time constant to estimate the NOx algorithm gain from the history has no
+impact for NOx. This parameter is still in place for consistency reasons with
+the VOC tuning parameters command. This getter will always return the default
+value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gating_max_duration_minutes:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Maximum duration of gating in minutes (freeze of estimator during high NOx index
+signal). Set to zero to disable the gating.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return std_initial:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The initial estimate for standard deviation has no impact for NOx. This
+parameter is still in place for consistency reasons with the VOC tuning
+parameters command. This getter will always return the default value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gain_factor:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Gain factor to amplify or to attenuate the NOx index output.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.store_nv_data">
+<code class="descname">store_nv_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.store_nv_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.store_nv_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores all algorithm parameters to the non-volatile memory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.set_temperature_offset_for_rht_measurements">
+<code class="descname">set_temperature_offset_for_rht_measurements</code><span class="sig-paren">(</span><em>t_offset</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.set_temperature_offset_for_rht_measurements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.set_temperature_offset_for_rht_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t_offset</strong> – Temperature offset in degrees celsius. Accepted data formats is a int16 value (2
+bytes). Values are in degrees celsius with a scaling of 200. Thus the provided
+value must be multiplied by 200.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.set_voc_tuning_parameters">
+<code class="descname">set_voc_tuning_parameters</code><span class="sig-paren">(</span><em>voc_index_offset</em>, <em>learning_time_offset_hours</em>, <em>learning_time_gain_hours</em>, <em>gating_max_duration_minutes</em>, <em>std_initial</em>, <em>gain_factor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.set_voc_tuning_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.set_voc_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets parameters to customize the VOC algorithm. This command is only available
+in idle mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>voc_index_offset</strong> – VOC index representing typical (average) conditions. Allowed values are in range
+1..250. The default value is 100.</li>
+<li><strong>learning_time_offset_hours</strong> – Time constant to estimate the VOC algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time. Allowed
+values are in range 1..1000. The default value is 12 hours.</li>
+<li><strong>learning_time_gain_hours</strong> – Time constant to estimate the VOC algorithm gain from the history in hours. Past
+events will be forgotten after about twice the learning time. Allowed values are
+in range 1..1000. The default value is 12 hours.</li>
+<li><strong>gating_max_duration_minutes</strong> – Maximum duration of gating in minutes (freeze of estimator during high VOC index
+signal). Set to zero to disable the gating. Allowed values are in range 0..3000.
+The default value is 180 minutes.</li>
+<li><strong>std_initial</strong> – Initial estimate for standard deviation. Lower value boosts events during
+initial learning period, but may result in larger device-to-device variations.
+Allowed values are in range 10..5000. The default value is 50.</li>
+<li><strong>gain_factor</strong> – Gain factor to amplify or to attenuate the VOC index output. Allowed values are
+in range 1..1000. The default value is 230.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.set_nox_tuning_parameters">
+<code class="descname">set_nox_tuning_parameters</code><span class="sig-paren">(</span><em>nox_index_offset</em>, <em>learning_time_offset_hours</em>, <em>learning_time_gain_hours</em>, <em>gating_max_duration_minutes</em>, <em>std_initial</em>, <em>gain_factor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.set_nox_tuning_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.set_nox_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets parameters to customize the NOx algorithm. This command is only available
+in idle mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nox_index_offset</strong> – NOx index representing typical (average) conditions. Allowed values are in range
+1..250. The default value is 1.</li>
+<li><strong>learning_time_offset_hours</strong> – Time constant to estimate the NOx algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time. Allowed
+values are in range 1..1000. The default value is 12 hours.</li>
+<li><strong>learning_time_gain_hours</strong> – The time constant to estimate the NOx algorithm gain from the history has no
+impact for the NOx algorithm. This parameter is still in place for consistency
+reasons with the VOC tuning parameters command. This parameter must always be
+set to 12 hours.</li>
+<li><strong>gating_max_duration_minutes</strong> – Maximum duration of gating in minutes (freeze of estimator during high NOx index
+signal). Set to zero to disable the gating. Allowed values are in range 0..3000.
+The default value is 720 minutes.</li>
+<li><strong>std_initial</strong> – The initial estimate for standard deviation parameter has no impact for the NOx
+algorithm. This parameter is still in place for consistency reasons with the VOC
+tuning parameters command. This parameter must always be set to 50.</li>
+<li><strong>gain_factor</strong> – Gain factor to amplify or to attenuate the NOx index output. Allowed values are
+in range 1..1000. The default value is 230.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.get_voc_state">
+<code class="descname">get_voc_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.get_voc_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.get_voc_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current VOC algorithm state. Retrieved values can be used to set the
+VOC algorithm state to resume operation after a short interruption, skipping
+initial learning phase. This command is only available during measurement mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return state:</th><td class="field-body">Current VOC algorithm state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.set_voc_state">
+<code class="descname">set_voc_state</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.set_voc_state"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.set_voc_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set previously retrieved VOC algorithm state to resume operation after a short
+interruption, skipping initial learning phase. This command is only available in
+idle mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> – Current VOC algorithm state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.enter_bootloader">
+<code class="descname">enter_bootloader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.enter_bootloader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.enter_bootloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to enter into the bootloader mode. The device will reboot into
+bootloader mode and wait until the new Firmware is received (start update
+command expected). Even after a power reset, the device returns into bootloader
+mode. The response frame is sent before the reset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.start_update">
+<code class="descname">start_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.start_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.start_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to start the firmware update. The devices flash will be erased (except
+bootloader) and the internal pointers resetted. The device is then ready to
+receive the new firmware with the update data command.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.update_data">
+<code class="descname">update_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.update_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.update_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to send the new firmware data as hex code in binary format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – Firmware hex data in binary format.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41DeviceBase.stop_update">
+<code class="descname">stop_update</code><span class="sig-paren">(</span><em>checksum</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41DeviceBase.stop_update"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41DeviceBase.stop_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>After all update data frames are sent, the stop update marks the end of the
+update sequence. The checksum is sent to the device and verification is done.
+The device state represents the success of the update sequence. If successfully,
+the device writes the signature and reboots into the application.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checksum</strong> – Checksum of the firmware data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.device.</code><code class="descname">Svm41Device</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41Device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Driver class implementation of SVM41</p>
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>channel</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41Device.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.read_measured_values">
+<code class="descname">read_measured_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/device.html#Svm41Device.read_measured_values"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.read_measured_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read measurement data and apply appropriate scaling.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return a_humidity:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Measured humidity in %RH. The raw value is scaled appropriately.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return a_temperature:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Measured temperature in degrees celsius. The raw value is scaled appropriately.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return a_voc_index:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Measured VOC Index ticks.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return a_nox_index:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Measured NOx Index ticks.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.device_reset">
+<code class="descname">device_reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.device_reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executs a reset on the device.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.enter_bootloader">
+<code class="descname">enter_bootloader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.enter_bootloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to enter into the bootloader mode. The device will reboot into
+bootloader mode and wait until the new Firmware is received (start update
+command expected). Even after a power reset, the device returns into bootloader
+mode. The response frame is sent before the reset.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_nox_tuning_parameters">
+<code class="descname">get_nox_tuning_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_nox_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currently set parameters for customizing the NOx algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return nox_index_offset:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">NOx index representing typical (average) conditions.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return learning_time_offset_hours:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Time constant to estimate the NOx algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return learning_time_gain_hours:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The time constant to estimate the NOx algorithm gain from the history has no
+impact for NOx. This parameter is still in place for consistency reasons with
+the VOC tuning parameters command. This getter will always return the default
+value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gating_max_duration_minutes:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Maximum duration of gating in minutes (freeze of estimator during high NOx index
+signal). Set to zero to disable the gating.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return std_initial:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The initial estimate for standard deviation has no impact for NOx. This
+parameter is still in place for consistency reasons with the VOC tuning
+parameters command. This getter will always return the default value.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gain_factor:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Gain factor to amplify or to attenuate the NOx index output.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_product_name">
+<code class="descname">get_product_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_product_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product name from the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return product_name:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Character array containing the product name.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_product_type">
+<code class="descname">get_product_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_product_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product type from the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return product_type:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Character array containing the product type.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_serial_number">
+<code class="descname">get_serial_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the serial number from the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return serial_number:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Character array containing the serial number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_system_up_time">
+<code class="descname">get_system_up_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_system_up_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the system up time of the device.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return system_up_time:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">The time since the last power-on or device reset in seconds.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_temperature_offset_for_rht_measurements">
+<code class="descname">get_temperature_offset_for_rht_measurements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_temperature_offset_for_rht_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return t_offset:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Temperature offset which is used for the RHT measurements. Values are in degrees
+celsius with a scaling of 200. Thus the received value must be divided by 200.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_version">
+<code class="descname">get_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the version information for the hardware, firmware and SHDLC protocol.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return firmware_major:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Firmware major version number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return firmware_minor:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Firmware minor version number.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return firmware_debug:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Firmware debug state. If the debug state is set, the firmware is in development.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return hardware_major:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Hardware major version number.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return hardware_minor:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Hardware minor version number.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return protocol_major:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Protocol major version number.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return protocol_minor:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Protocol minor version number.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_voc_state">
+<code class="descname">get_voc_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_voc_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current VOC algorithm state. Retrieved values can be used to set the
+VOC algorithm state to resume operation after a short interruption, skipping
+initial learning phase. This command is only available during measurement mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return state:</th><td class="field-body">Current VOC algorithm state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.get_voc_tuning_parameters">
+<code class="descname">get_voc_tuning_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.get_voc_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currently set parameters for customizing the VOC algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return voc_index_offset:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">VOC index representing typical (average) conditions.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return learning_time_offset_hours:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Time constant to estimate the VOC algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return learning_time_gain_hours:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Time constant to estimate the VOC algorithm gain from the history in hours. Past
+events will be forgotten after about twice the learning time.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gating_max_duration_minutes:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Maximum duration of gating in minutes (freeze of estimator during high VOC index
+signal). Set to zero to disable the gating.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return std_initial:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Initial estimate for standard deviation. Lower value boosts events during
+initial learning period, but may result in larger device-to-device variations.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return gain_factor:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Gain factor to amplify or to attenuate the VOC index output.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.read_measured_raw_values">
+<code class="descname">read_measured_raw_values</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.read_measured_raw_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the measured raw values.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return raw_humidity:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Uncompensated raw humidity in % RH as read from the SHT40 with a scaling factor
+of 100.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return raw_temperature:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Uncompensated raw temperature in degrees celsius as read from the SHT40 with a
+scaling of 200.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return raw_voc_ticks:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Raw VOC output ticks as read from the SGP sensor.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return raw_nox_ticks:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Raw NOx output ticks as read from the SGP sensor.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.read_measured_values_as_integers">
+<code class="descname">read_measured_values_as_integers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.read_measured_values_as_integers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the new measurement results as integers.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name" colspan="2">Return humidity:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">Compensated ambient humidity in % RH with a scaling factor of 100.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return temperature:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">Compensated ambient temperature in degrees celsius with a scaling of 200.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name" colspan="2">Return voc_index:</th></tr>
+<tr class="field-odd field"><td>&#160;</td><td class="field-body">VOC index with a scaling value of 10.</td>
+</tr>
+<tr class="field-even field"><th class="field-name" colspan="2">Return nox_index:</th></tr>
+<tr class="field-even field"><td>&#160;</td><td class="field-body">NOx index with a scaling value of 10.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.set_nox_tuning_parameters">
+<code class="descname">set_nox_tuning_parameters</code><span class="sig-paren">(</span><em>nox_index_offset</em>, <em>learning_time_offset_hours</em>, <em>learning_time_gain_hours</em>, <em>gating_max_duration_minutes</em>, <em>std_initial</em>, <em>gain_factor</em><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.set_nox_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets parameters to customize the NOx algorithm. This command is only available
+in idle mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>nox_index_offset</strong> – NOx index representing typical (average) conditions. Allowed values are in range
+1..250. The default value is 1.</li>
+<li><strong>learning_time_offset_hours</strong> – Time constant to estimate the NOx algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time. Allowed
+values are in range 1..1000. The default value is 12 hours.</li>
+<li><strong>learning_time_gain_hours</strong> – The time constant to estimate the NOx algorithm gain from the history has no
+impact for the NOx algorithm. This parameter is still in place for consistency
+reasons with the VOC tuning parameters command. This parameter must always be
+set to 12 hours.</li>
+<li><strong>gating_max_duration_minutes</strong> – Maximum duration of gating in minutes (freeze of estimator during high NOx index
+signal). Set to zero to disable the gating. Allowed values are in range 0..3000.
+The default value is 720 minutes.</li>
+<li><strong>std_initial</strong> – The initial estimate for standard deviation parameter has no impact for the NOx
+algorithm. This parameter is still in place for consistency reasons with the VOC
+tuning parameters command. This parameter must always be set to 50.</li>
+<li><strong>gain_factor</strong> – Gain factor to amplify or to attenuate the NOx index output. Allowed values are
+in range 1..1000. The default value is 230.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.set_temperature_offset_for_rht_measurements">
+<code class="descname">set_temperature_offset_for_rht_measurements</code><span class="sig-paren">(</span><em>t_offset</em><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.set_temperature_offset_for_rht_measurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>t_offset</strong> – Temperature offset in degrees celsius. Accepted data formats is a int16 value (2
+bytes). Values are in degrees celsius with a scaling of 200. Thus the provided
+value must be multiplied by 200.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.set_voc_state">
+<code class="descname">set_voc_state</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.set_voc_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set previously retrieved VOC algorithm state to resume operation after a short
+interruption, skipping initial learning phase. This command is only available in
+idle mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>state</strong> – Current VOC algorithm state.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.set_voc_tuning_parameters">
+<code class="descname">set_voc_tuning_parameters</code><span class="sig-paren">(</span><em>voc_index_offset</em>, <em>learning_time_offset_hours</em>, <em>learning_time_gain_hours</em>, <em>gating_max_duration_minutes</em>, <em>std_initial</em>, <em>gain_factor</em><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.set_voc_tuning_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets parameters to customize the VOC algorithm. This command is only available
+in idle mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>voc_index_offset</strong> – VOC index representing typical (average) conditions. Allowed values are in range
+1..250. The default value is 100.</li>
+<li><strong>learning_time_offset_hours</strong> – Time constant to estimate the VOC algorithm offset from the history in hours.
+Past events will be forgotten after about twice the learning time. Allowed
+values are in range 1..1000. The default value is 12 hours.</li>
+<li><strong>learning_time_gain_hours</strong> – Time constant to estimate the VOC algorithm gain from the history in hours. Past
+events will be forgotten after about twice the learning time. Allowed values are
+in range 1..1000. The default value is 12 hours.</li>
+<li><strong>gating_max_duration_minutes</strong> – Maximum duration of gating in minutes (freeze of estimator during high VOC index
+signal). Set to zero to disable the gating. Allowed values are in range 0..3000.
+The default value is 180 minutes.</li>
+<li><strong>std_initial</strong> – Initial estimate for standard deviation. Lower value boosts events during
+initial learning period, but may result in larger device-to-device variations.
+Allowed values are in range 10..5000. The default value is 50.</li>
+<li><strong>gain_factor</strong> – Gain factor to amplify or to attenuate the VOC index output. Allowed values are
+in range 1..1000. The default value is 230.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.start_measurement">
+<code class="descname">start_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.start_measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts measurement in polling mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.start_update">
+<code class="descname">start_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.start_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to start the firmware update. The devices flash will be erased (except
+bootloader) and the internal pointers resetted. The device is then ready to
+receive the new firmware with the update data command.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.stop_measurement">
+<code class="descname">stop_measurement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.stop_measurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leaves the measurement mode and returns to the idle mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.stop_update">
+<code class="descname">stop_update</code><span class="sig-paren">(</span><em>checksum</em><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.stop_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>After all update data frames are sent, the stop update marks the end of the
+update sequence. The checksum is sent to the device and verification is done.
+The device state represents the success of the update sequence. If successfully,
+the device writes the signature and reboots into the application.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>checksum</strong> – Checksum of the firmware data.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.store_nv_data">
+<code class="descname">store_nv_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.store_nv_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores all algorithm parameters to the non-volatile memory.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sensirion_shdlc_svm41.device.Svm41Device.update_data">
+<code class="descname">update_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#sensirion_shdlc_svm41.device.Svm41Device.update_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to send the new firmware data as hex code in binary format.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – Firmware hex data in binary format.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-sensirion_shdlc_svm41.commands">
+<span id="commands"></span><h2>Commands<a class="headerlink" href="#module-sensirion_shdlc_svm41.commands" title="Permalink to this headline">¶</a></h2>
+<p>The transfer classes specify the data that is transferred between host and sensor. The generated transfer classes
+are used by the driver class and not intended for direct use.</p>
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetProductType">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetProductType</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetProductType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetProductType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product type from the device.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetProductName">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetProductName</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetProductName"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetProductName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the product name from the device.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetSerialNumber">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetSerialNumber</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetSerialNumber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetSerialNumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the serial number from the device.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetVersion">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetVersion</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the version information for the hardware, firmware and SHDLC protocol.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.DeviceReset">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">DeviceReset</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#DeviceReset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.DeviceReset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executs a reset on the device.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetSystemUpTime">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetSystemUpTime</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetSystemUpTime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetSystemUpTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the system up time of the device.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.StartMeasurement">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">StartMeasurement</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#StartMeasurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.StartMeasurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts measurement in polling mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.StopMeasurement">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">StopMeasurement</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#StopMeasurement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.StopMeasurement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Leaves the measurement mode and returns to the idle mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.ReadMeasuredValuesAsIntegers">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">ReadMeasuredValuesAsIntegers</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#ReadMeasuredValuesAsIntegers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.ReadMeasuredValuesAsIntegers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the new measurement results as integers.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.ReadMeasuredRawValues">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">ReadMeasuredRawValues</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#ReadMeasuredRawValues"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.ReadMeasuredRawValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the measured raw values.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetTemperatureOffsetForRhtMeasurements">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetTemperatureOffsetForRhtMeasurements</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetTemperatureOffsetForRhtMeasurements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetTemperatureOffsetForRhtMeasurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetVocTuningParameters">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetVocTuningParameters</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetVocTuningParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetVocTuningParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currently set parameters for customizing the VOC algorithm.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetNoxTuningParameters">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetNoxTuningParameters</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetNoxTuningParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetNoxTuningParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the currently set parameters for customizing the NOx algorithm.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.StoreNvData">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">StoreNvData</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#StoreNvData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.StoreNvData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores all algorithm parameters to the non-volatile memory.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.SetTemperatureOffsetForRhtMeasurements">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">SetTemperatureOffsetForRhtMeasurements</code><span class="sig-paren">(</span><em>t_offset</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#SetTemperatureOffsetForRhtMeasurements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.SetTemperatureOffsetForRhtMeasurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.SetVocTuningParameters">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">SetVocTuningParameters</code><span class="sig-paren">(</span><em>voc_index_offset</em>, <em>learning_time_offset_hours</em>, <em>learning_time_gain_hours</em>, <em>gating_max_duration_minutes</em>, <em>std_initial</em>, <em>gain_factor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#SetVocTuningParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.SetVocTuningParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets parameters to customize the VOC algorithm. This command is only available
+in idle mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.SetNoxTuningParameters">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">SetNoxTuningParameters</code><span class="sig-paren">(</span><em>nox_index_offset</em>, <em>learning_time_offset_hours</em>, <em>learning_time_gain_hours</em>, <em>gating_max_duration_minutes</em>, <em>std_initial</em>, <em>gain_factor</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#SetNoxTuningParameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.SetNoxTuningParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets parameters to customize the NOx algorithm. This command is only available
+in idle mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.GetVocState">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">GetVocState</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#GetVocState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.GetVocState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the current VOC algorithm state. Retrieved values can be used to set the
+VOC algorithm state to resume operation after a short interruption, skipping
+initial learning phase. This command is only available during measurement mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.SetVocState">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">SetVocState</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#SetVocState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.SetVocState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set previously retrieved VOC algorithm state to resume operation after a short
+interruption, skipping initial learning phase. This command is only available in
+idle mode.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.EnterBootloader">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">EnterBootloader</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#EnterBootloader"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.EnterBootloader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to enter into the bootloader mode. The device will reboot into
+bootloader mode and wait until the new Firmware is received (start update
+command expected). Even after a power reset, the device returns into bootloader
+mode. The response frame is sent before the reset.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.StartUpdate">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">StartUpdate</code><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#StartUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.StartUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to start the firmware update. The devices flash will be erased (except
+bootloader) and the internal pointers resetted. The device is then ready to
+receive the new firmware with the update data command.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.UpdateData">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">UpdateData</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#UpdateData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.UpdateData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command to send the new firmware data as hex code in binary format.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.commands.StopUpdate">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.commands.</code><code class="descname">StopUpdate</code><span class="sig-paren">(</span><em>checksum</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/commands.html#StopUpdate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.commands.StopUpdate" title="Permalink to this definition">¶</a></dt>
+<dd><p>After all update data frames are sent, the stop update marks the end of the
+update sequence. The checksum is sent to the device and verification is done.
+The device state represents the success of the update sequence. If successfully,
+the device writes the signature and reboots into the application.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-sensirion_shdlc_svm41.result_types">
+<span id="result-types"></span><h2>Result Types<a class="headerlink" href="#module-sensirion_shdlc_svm41.result_types" title="Permalink to this headline">¶</a></h2>
+<p>The signal classes specify transformations of the raw sensor signals into a meaningful units.
+The generated signal types are used by the driver class and not intended for direct use.</p>
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.result_types.SignalTemperature">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.result_types.</code><code class="descname">SignalTemperature</code><span class="sig-paren">(</span><em>temperature_raw</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/result_types.html#SignalTemperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.result_types.SignalTemperature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.result_types.SignalHumidity">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.result_types.</code><code class="descname">SignalHumidity</code><span class="sig-paren">(</span><em>humidity_raw</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/result_types.html#SignalHumidity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.result_types.SignalHumidity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured humidity in %RH. The raw value is scaled appropriately.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.result_types.SignalVocIndex">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.result_types.</code><code class="descname">SignalVocIndex</code><span class="sig-paren">(</span><em>voc_index_raw</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/result_types.html#SignalVocIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.result_types.SignalVocIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured VOC Index ticks.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sensirion_shdlc_svm41.result_types.SignalNoxIndex">
+<em class="property">class </em><code class="descclassname">sensirion_shdlc_svm41.result_types.</code><code class="descname">SignalNoxIndex</code><span class="sig-paren">(</span><em>nox_index_raw</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_shdlc_svm41/result_types.html#SignalNoxIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sensirion_shdlc_svm41.result_types.SignalNoxIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured NOx Index ticks.</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quick Start" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022 Sensirion AG, Switzerland
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -8,7 +8,7 @@ This repository contains the Python driver to communicate with a Sensirion SVM4X
 Click [here](https://www.sensirion.com/my-sgp-ek/) to learn more about the Sensirion SVM4X sensor.
 
 
-unknown
+The SVM4x evaluation kit covers evaluation of the SGP40 and SGP41 sensors.
 
 
 

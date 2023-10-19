@@ -12,8 +12,8 @@ python_requires = '>=3.6, <4'
 # Packages that this package imports. List everything apart from standard lib packages.
 install_requires = [
     'sensirion-shdlc-driver~=0.1.5',
-    'sensirion-driver-adapters~=2.1.2',
-    'sensirion_driver_support_types~=0.1.0',
+    'sensirion-driver-adapters>=2.1.8,<3.0',
+    'sensirion-driver-support-types~=0.2.0',
 ]
 
 # Packages required for tests and docs
@@ -32,7 +32,7 @@ extras_require = {
 }
 
 # Read version number from version.py
-version_line = open("sensirion_shdlc_svm41/version.py", "rt").read()
+version_line = open("sensirion_uart_svm4x/version.py", "rt").read()
 result = re.search(r"^version = ['\"]([^'\"]*)['\"]", version_line, re.M)
 if result:
     version_string = result.group(1)
@@ -41,24 +41,27 @@ else:
 
 # Use README.rst and CHANGELOG.rst as package description
 root_path = os.path.dirname(__file__)
-readme = open(os.path.join(root_path, 'README.rst')).read()
-changelog = open(os.path.join(root_path, 'CHANGELOG.rst')).read()
-long_description = readme.strip() + "\n\n" + changelog.strip() + "\n"
+long_description = open(os.path.join(root_path, 'README.md')).read()
 
 setup(
-    name='sensirion_shdlc_svm41',
+    name='sensirion_uart_svm4x',
     version=version_string,
     author='Sensirion',
     author_email='info@sensirion.com',
-    description='SHDLC driver for the Sensirion SVM41 sensor family',
+    description='SHDLC driver for the Sensirion SVM4X sensor family',
     license='BSD',
-    keywords="""Sensirion SVM41
+    keywords="""Sensirion SVM4X
         SHDLC
         UART
-        SVM41""",
-    url='https://sensirion.github.io/python-uart-svm41/',
+        SVM4x""",
+    project_urls={
+        "Documentation": "https://sensirion.github.io/python-uart-svm4x",
+        "Repository": "https://github.com/Sensirion/python-uart-svm4x",
+        "Changelog": "https://github.com/Sensirion/python-uart-svm4x/blob/master/CHANGELOG.rst",
+    },
     packages=find_packages(exclude=['tests', 'tests.*']),
     long_description=long_description,
+    long_description_content_type='text/markdown',
     python_requires=python_requires,
     install_requires=install_requires,
     extras_require=extras_require,

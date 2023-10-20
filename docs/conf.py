@@ -11,22 +11,22 @@ from datetime import datetime
 import pkg_resources
 import sphinx.ext.autodoc
 
-import sensirion_shdlc_svm41
+import sensirion_uart_svm4x
 
 # Add project directory such that sphinx can detect the package.
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # -- Project information -----------------------------------------------------
-distribution = pkg_resources.get_distribution('sensirion_shdlc_svm41')
+distribution = pkg_resources.get_distribution('sensirion_uart_svm4x')
 
-project = u'sensirion_shdlc_svm41'
+project = u'sensirion_uart_svm4x'
 copyright = u'{} Sensirion AG, Switzerland'.format(datetime.now().year)
 author = 'Sensirion AG'
 
 # The short X.Y version
-version = sensirion_shdlc_svm41.__version__
+version = sensirion_uart_svm4x.__version__
 # The full version, including alpha/beta/rc tags
-release = sensirion_shdlc_svm41.__version__
+release = sensirion_uart_svm4x.__version__
 
 # -- General configuration ---------------------------------------------------
 
@@ -59,20 +59,15 @@ master_doc = 'index'
 #
 html_theme = 'sphinx_rtd_theme'
 
-# Workaround for weirdly formatted function parameters. See https://github.com/readthedocs/sphinx_rtd_theme/issues/766
-html4_writer = True
-
 html_favicon = 'favicon.ico'
 
 # -- Extension configuration -------------------------------------------------
-
-autodoc_member_order = 'bysource'
-
-autodoc_default_flags = [
-    'members',
-    'special-members',  # To see __init__()
-    'inherited-members',  # To see the methods from base classes
-]
+autodoc_default_options = {
+    'members': None,
+    'member-order': 'bysource',
+    'special-members': '__init__',
+    'undoc-members': True
+}
 
 
 def autodoc_skip_member(app, what, name, obj, skip, options):
@@ -84,11 +79,6 @@ def autodoc_skip_member(app, what, name, obj, skip, options):
 def setup(app):
     app.connect('autodoc-skip-member', autodoc_skip_member)
 
-
-# Workaround for "=None" documentation of instance attributes
-# (see https://github.com/sphinx-doc/sphinx/issues/2044)
-sphinx.ext.autodoc.InstanceAttributeDocumenter.add_directive_header = \
-    sphinx.ext.autodoc.ClassLevelDocumenter.add_directive_header
 
 scv_whitelist_branches = ('master',)
 

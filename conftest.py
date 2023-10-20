@@ -2,7 +2,9 @@
 # (c) Copyright 2022 Sensirion AG, Switzerland
 
 import pytest
-from sensirion_shdlc_driver import ShdlcSerialPort, ShdlcConnection
+from sensirion_driver_adapters.mocks.mock_shdlc_channel_provider import ShdlcMockPortChannelProvider
+from sensirion_driver_adapters.shdlc_adapter.shdlc_serial_channel_provider import ShdlcSerialPortChannelProvider
+from sensirion_uart_svm4x.response_provider import Svm4xResponseProvider
 
 
 def pytest_addoption(parser):
@@ -43,9 +45,11 @@ def pytest_report_header(config):
 
 
 @pytest.fixture(scope="session")
-def shdlc_port(request):
-    serial_port = _get_serial_port(request.config, validate=True)
+def channel_provider(request):
+    serial_port = _get_serial_port(request.config, validate=False)
     serial_bitrate = _get_serial_bitrate(request.config)
-    with ShdlcSerialPort(serial_port, serial_bitrate) as port:
-        yield port
-
+    if serial_port is not None:
+        yield ShdlcSerialPortChannelProvider(serial_port=serial_port,
+                                             serial_baud_rate=serial_bitrate)
+    else:
+        yield ShdlcMockPortChannelProvider(response_provider=Svm4xResponseProvider())

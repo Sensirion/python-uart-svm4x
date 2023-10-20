@@ -1,25 +1,25 @@
 API Documentation
 =================
 
-SVM41
-=====
+SVM4X
+-----
 
-Svm41Device
+Svm4xDevice
 ~~~~~~~~~~~
 
 
-.. automodule:: sensirion_shdlc_svm41.device
+.. automodule:: sensirion_uart_svm4x.device
 
 Commands
 ~~~~~~~~
 
-.. automodule:: sensirion_shdlc_svm41.commands
+.. automodule:: sensirion_uart_svm4x.commands
     :exclude-members: __init__
 
 
 Result Types
 ~~~~~~~~~~~~
 
-.. automodule:: sensirion_shdlc_svm41.result_types
+.. automodule:: sensirion_uart_svm4x.result_types
     :exclude-members: __init__
 

@@ -435,3 +435,14 @@ class Svm4xDevice(Svm4xDeviceBase):
         t_offset_int = int((t_offset * 200) + 0.5)
         self.svm4x.set_temperature_offset_for_rht_measurements(t_offset_int)
         return
+
+    def get_product_type_as_int(self):
+        """
+        Get the product type. The product type (sometimes also called "device
+        type") can be used to detect what kind of SHDLC product is connected.
+
+        :return: The product type as an integer.
+        :rtype:  integer
+        """
+        product_type = self.get_product_type()
+        return int(product_type, 16)

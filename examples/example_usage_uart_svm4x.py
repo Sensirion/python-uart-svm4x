@@ -44,8 +44,8 @@ with ShdlcSerialPort(port=args.serial_port, baudrate=115200) as port:
           f"protocol_major: {protocol_major}; "
           f"protocol_minor: {protocol_minor}; "
           )
-    arg_0 = sensor.get_temperature_offset_for_rht_measurements()
-    print(f"arg_0: {arg_0}; "
+    t_offset = sensor.get_temperature_offset_for_rht_measurements()
+    print(f"t_offset: {t_offset}; "
           )
     sensor.set_temperature_offset_for_rht_measurements(0)
     sensor.start_measurement()

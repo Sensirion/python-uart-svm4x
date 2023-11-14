@@ -1,7 +1,7 @@
 Execute measurements
 ====================
 
-The following steps shows how to use this driver to execute a simple measurement on a Windows system.
+The following steps show how to use this driver to execute a simple measurement on a Windows system.
 
 1. Install the SVM4X sensor driver and all required packages as described in :ref:`Installation`.
 2. Connect the SVM4X sensor to your system with the serial USB cable.

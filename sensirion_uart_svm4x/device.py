@@ -432,7 +432,7 @@ class Svm4xDevice(Svm4xDeviceBase):
         :param t_offset:
             Temperature offset as float in degrees celsius.
         """
-        t_offset_int = int((t_offset * 200) + 0.5)
+        t_offset_int = round(t_offset * 200)
         self.svm4x.set_temperature_offset_for_rht_measurements(t_offset_int)
         return
 

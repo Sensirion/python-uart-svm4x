@@ -17,11 +17,11 @@ sensor.
 
 from sensirion_driver_adapters.transfer import execute_transfer
 from sensirion_driver_support_types.mixin_access import MixinAccess
-from sensirion_uart_svm4x.commands import (DeviceReset, GetNoxState, GetNoxTuningParameters, GetProductName,
+from sensirion_uart_svm4x.commands import (DeviceReset, GetNoxTuningParameters, GetProductName,
                                            GetProductType, GetSerialNumber, GetSystemUpTime,
                                            GetTemperatureOffsetForRhtMeasurements, GetVersion, GetVocState,
                                            GetVocTuningParameters, ReadMeasuredRawValues, ReadMeasuredValuesAsIntegers,
-                                           SetNoxState, SetNoxTuningParameters, SetTemperatureOffsetForRhtMeasurements,
+                                           SetNoxTuningParameters, SetTemperatureOffsetForRhtMeasurements,
                                            SetVocState, SetVocTuningParameters, StartMeasurement, StopMeasurement,
                                            StoreNvData)
 
@@ -372,21 +372,6 @@ class Svm4xDeviceBase:
         transfer = GetVocState()
         return execute_transfer(self._channel, transfer)[0]
 
-    def get_nox_state(self):
-        """
-        Gets the current NOx algorithm state. Retrieved values can be used to set the
-        NOx algorithm state to resume operation after a short interruption, skipping
-        initial learning phase. This command is only available during measurement mode.
-
-        :return state:
-            Current NOx algorithm state.
-
-        .. note::
-            This feature can only be used after at least 3 hours of continuous operation.
-        """
-        transfer = GetNoxState()
-        return execute_transfer(self._channel, transfer)[0]
-
     def set_voc_state(self, state):
         """
         Set previously retrieved VOC algorithm state to resume operation after a short
@@ -400,21 +385,6 @@ class Svm4xDeviceBase:
             This feature should not be used after interruptions of more than 10 minutes.
         """
         transfer = SetVocState(state)
-        return execute_transfer(self._channel, transfer)
-
-    def set_nox_state(self, state):
-        """
-        Set previously retrieved NOx algorithm state to resume operation after a short
-        interruption, skipping initial learning phase. This command is only available in
-        idle mode.
-
-        :param state:
-            Current NOx algorithm state.
-
-        .. note::
-            This feature should not be used after interruptions of more than 10 minutes.
-        """
-        transfer = SetNoxState(state)
         return execute_transfer(self._channel, transfer)
 
 

@@ -290,22 +290,6 @@ class GetVocState(Transfer):
     rx = RxData('>8B')
 
 
-class GetNoxState(Transfer):
-    """
-    Gets the current NOx algorithm state. Retrieved values can be used to set the
-    NOx algorithm state to resume operation after a short interruption, skipping
-    initial learning phase. This command is only available during measurement mode.
-    """
-
-    CMD_ID = 0x61
-
-    def pack(self):
-        return self.tx_data.pack([0x9])
-
-    tx = TxData(CMD_ID, '>BB', device_busy_delay=0.05, slave_address=None, ignore_ack=False)
-    rx = RxData('>8B')
-
-
 class SetVocState(Transfer):
     """
     Set previously retrieved VOC algorithm state to resume operation after a short
@@ -320,23 +304,5 @@ class SetVocState(Transfer):
 
     def pack(self):
         return self.tx_data.pack([0x88, self._state])
-
-    tx = TxData(CMD_ID, '>BB8B', device_busy_delay=0.05, slave_address=None, ignore_ack=False)
-
-
-class SetNoxState(Transfer):
-    """
-    Set previously retrieved NOx algorithm state to resume operation after a short
-    interruption, skipping initial learning phase. This command is only available in
-    idle mode.
-    """
-
-    CMD_ID = 0x61
-
-    def __init__(self, state):
-        self._state = state
-
-    def pack(self):
-        return self.tx_data.pack([0x89, self._state])
 
     tx = TxData(CMD_ID, '>BB8B', device_busy_delay=0.05, slave_address=None, ignore_ack=False)

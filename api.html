@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>API Documentation &mdash; sensirion_uart_svm4x 1.0.0 documentation</title>
+  <title>API Documentation &mdash; sensirion_uart_svm4x 2.0.3 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -31,7 +31,7 @@
             <a href="index.html" class="icon icon-home"> sensirion_uart_svm4x
           </a>
               <div class="version">
-                1.0.0
+                2.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -210,7 +210,8 @@ broadcast, the reset is done directly after the reception of the command.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.read_measured_values_as_integers">
 <span class="sig-name descname"><span class="pre">read_measured_values_as_integers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.read_measured_values_as_integers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.read_measured_values_as_integers" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the new measurement results as integers.</p>
+<dd><p>Read measurement data as integers.
+This command is named get_signals in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return humidity</dt>
 <dd class="field-odd"><p>Compensated ambient humidity in % RH with a scaling factor of 100.</p>
@@ -238,7 +239,8 @@ initialized values.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.read_measured_raw_values">
 <span class="sig-name descname"><span class="pre">read_measured_raw_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.read_measured_raw_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.read_measured_raw_values" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the measured raw values.</p>
+<dd><p>Read measuremed raw values.
+This command is named get_signals_raw in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return raw_humidity</dt>
 <dd class="field-odd"><p>Uncompensated raw humidity in % RH as read from the SHT40 with a scaling factor
@@ -268,7 +270,8 @@ initialized values.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.get_temperature_offset_for_rht_measurements">
 <span class="sig-name descname"><span class="pre">get_temperature_offset_for_rht_measurements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.get_temperature_offset_for_rht_measurements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.get_temperature_offset_for_rht_measurements" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.
+This command is named get_temperature_offset in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return t_offset</dt>
 <dd class="field-odd"><p>Temperature offset which is used for the RHT measurements. Values are in degrees
@@ -280,7 +283,8 @@ celsius with a scaling of 200. Thus the received value must be divided by 200.</
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.get_voc_tuning_parameters">
 <span class="sig-name descname"><span class="pre">get_voc_tuning_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.get_voc_tuning_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.get_voc_tuning_parameters" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the currently set parameters for customizing the VOC algorithm.</p>
+<dd><p>Gets the currently set parameters for customizing the VOC algorithm.
+This command is named get_voc_parameters in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return voc_index_offset</dt>
 <dd class="field-odd"><p>VOC index representing typical (average) conditions.</p>
@@ -310,7 +314,8 @@ initial learning period, but may result in larger device-to-device variations.</
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.get_nox_tuning_parameters">
 <span class="sig-name descname"><span class="pre">get_nox_tuning_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.get_nox_tuning_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.get_nox_tuning_parameters" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the currently set parameters for customizing the NOx algorithm.</p>
+<dd><p>Gets the currently set parameters for customizing the NOx algorithm.
+This command is named get_nox_parameters in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return nox_index_offset</dt>
 <dd class="field-odd"><p>NOx index representing typical (average) conditions.</p>
@@ -343,7 +348,15 @@ parameters command. This getter will always return the default value.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.store_nv_data">
 <span class="sig-name descname"><span class="pre">store_nv_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.store_nv_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.store_nv_data" title="Permalink to this definition"></a></dt>
-<dd><p>Stores all algorithm parameters to the non-volatile memory.</p>
+<dd><p>This command stores all parameters previously set with the commands
+set_temperature_offset_for_rht_measurements, set_voc_tuning_parameters and
+set_nox_tuning_parameters to the non-volatile
+memory of SVM4x. These parameters will not be erased
+during reset and will be used by the corresponding algorithms
+after start-up. To reset the storage to factory settings the
+master has to set all parameters to the default values followed
+by a subsequent call of the store_nv_data command.
+This command is named store_input_parameters in the datasheet.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -369,7 +382,8 @@ device reset.</p>
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.set_voc_tuning_parameters">
 <span class="sig-name descname"><span class="pre">set_voc_tuning_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voc_index_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_offset_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_gain_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gating_max_duration_minutes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain_factor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.set_voc_tuning_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.set_voc_tuning_parameters" title="Permalink to this definition"></a></dt>
 <dd><p>Sets parameters to customize the VOC algorithm. This command is only available
-in idle mode.</p>
+in idle mode.
+This command is named set_voc_parameters in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -404,7 +418,8 @@ device reset.</p>
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.set_nox_tuning_parameters">
 <span class="sig-name descname"><span class="pre">set_nox_tuning_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nox_index_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_offset_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_gain_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gating_max_duration_minutes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain_factor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.set_nox_tuning_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.set_nox_tuning_parameters" title="Permalink to this definition"></a></dt>
 <dd><p>Sets parameters to customize the NOx algorithm. This command is only available
-in idle mode.</p>
+in idle mode.
+This command is named set_nox_parameters in the datasheet.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -454,23 +469,6 @@ initial learning phase. This command is only available during measurement mode.<
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.get_nox_state">
-<span class="sig-name descname"><span class="pre">get_nox_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.get_nox_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.get_nox_state" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the current NOx algorithm state. Retrieved values can be used to set the
-NOx algorithm state to resume operation after a short interruption, skipping
-initial learning phase. This command is only available during measurement mode.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return state</dt>
-<dd class="field-odd"><p>Current NOx algorithm state.</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This feature can only be used after at least 3 hours of continuous operation.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.set_voc_state">
 <span class="sig-name descname"><span class="pre">set_voc_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.set_voc_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.set_voc_state" title="Permalink to this definition"></a></dt>
 <dd><p>Set previously retrieved VOC algorithm state to resume operation after a short
@@ -484,37 +482,6 @@ idle mode.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This feature should not be used after interruptions of more than 10 minutes.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.set_nox_state">
-<span class="sig-name descname"><span class="pre">set_nox_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.set_nox_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.set_nox_state" title="Permalink to this definition"></a></dt>
-<dd><p>Set previously retrieved NOx algorithm state to resume operation after a short
-interruption, skipping initial learning phase. This command is only available in
-idle mode.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>state</strong> – Current NOx algorithm state.</p>
-</dd>
-</dl>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This feature should not be used after interruptions of more than 10 minutes.</p>
-</div>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDeviceBase.enter_bootloader">
-<span class="sig-name descname"><span class="pre">enter_bootloader</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDeviceBase.enter_bootloader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDeviceBase.enter_bootloader" title="Permalink to this definition"></a></dt>
-<dd><p>Command to enter into the bootloader mode. The device will reboot into
-bootloader mode and wait until the new Firmware is received (start update
-command expected). Even after a power reset, the device returns into bootloader
-mode. The response frame is sent before the reset.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>After the response frame is received, the device will not accept new commands
-until fully booted (wait at least 1 s).</p>
 </div>
 </dd></dl>
 
@@ -538,19 +505,55 @@ until fully booted (wait at least 1 s).</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDevice.read_measured_values">
 <span class="sig-name descname"><span class="pre">read_measured_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDevice.read_measured_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDevice.read_measured_values" title="Permalink to this definition"></a></dt>
-<dd><p>Read measurement data and apply appropriate scaling.</p>
+<dd><p>Read measurement data and apply scaling.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return a_humidity</dt>
-<dd class="field-odd"><p>Measured humidity in %RH. The raw value is scaled appropriately.</p>
+<dd class="field-odd"><p>Compensated ambient humidity in %RH.</p>
 </dd>
 <dt class="field-even">Return a_temperature</dt>
-<dd class="field-even"><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
+<dd class="field-even"><p>Compensated ambient temperature in degrees celsius.</p>
 </dd>
 <dt class="field-odd">Return a_voc_index</dt>
-<dd class="field-odd"><p>Measured VOC Index ticks.</p>
+<dd class="field-odd"><p>VOC Index</p>
 </dd>
 <dt class="field-even">Return a_nox_index</dt>
-<dd class="field-even"><p>Measured NOx Index ticks.</p>
+<dd class="field-even"><p>NOx Index</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDevice.get_temperature_offset_for_rht_measurements">
+<span class="sig-name descname"><span class="pre">get_temperature_offset_for_rht_measurements</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDevice.get_temperature_offset_for_rht_measurements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDevice.get_temperature_offset_for_rht_measurements" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return arg_0</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDevice.set_temperature_offset_for_rht_measurements">
+<span class="sig-name descname"><span class="pre">set_temperature_offset_for_rht_measurements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDevice.set_temperature_offset_for_rht_measurements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDevice.set_temperature_offset_for_rht_measurements" title="Permalink to this definition"></a></dt>
+<dd><p>This command sets the temperature offset used for the compensation of subsequent RHT measurement</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>t_offset</strong> – Temperature offset as float in degrees celsius.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_uart_svm4x.device.Svm4xDevice.get_product_type_as_int">
+<span class="sig-name descname"><span class="pre">get_product_type_as_int</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/device.html#Svm4xDevice.get_product_type_as_int"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.device.Svm4xDevice.get_product_type_as_int" title="Permalink to this definition"></a></dt>
+<dd><p>Get the product type. The product type (sometimes also called “device
+type”) can be used to detect what kind of SHDLC product is connected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The product type as an integer.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>integer</p>
 </dd>
 </dl>
 </dd></dl>
@@ -763,7 +766,8 @@ are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.ReadMeasuredValuesAsIntegers">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">ReadMeasuredValuesAsIntegers</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#ReadMeasuredValuesAsIntegers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.ReadMeasuredValuesAsIntegers" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the new measurement results as integers.</p>
+<dd><p>Read measurement data as integers.
+This command is named get_signals in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.ReadMeasuredValuesAsIntegers.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.ReadMeasuredValuesAsIntegers.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -789,7 +793,8 @@ are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.ReadMeasuredRawValues">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">ReadMeasuredRawValues</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#ReadMeasuredRawValues"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.ReadMeasuredRawValues" title="Permalink to this definition"></a></dt>
-<dd><p>Returns the measured raw values.</p>
+<dd><p>Read measuremed raw values.
+This command is named get_signals_raw in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.ReadMeasuredRawValues.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.ReadMeasuredRawValues.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -815,7 +820,8 @@ are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetTemperatureOffsetForRhtMeasurements">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">GetTemperatureOffsetForRhtMeasurements</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#GetTemperatureOffsetForRhtMeasurements"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetTemperatureOffsetForRhtMeasurements" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.</p>
+<dd><p>Gets the T-Offset for the temperature compensation of the RHT algorithm.
+This command is named get_temperature_offset in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetTemperatureOffsetForRhtMeasurements.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetTemperatureOffsetForRhtMeasurements.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -841,7 +847,8 @@ are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetVocTuningParameters">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">GetVocTuningParameters</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#GetVocTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetVocTuningParameters" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the currently set parameters for customizing the VOC algorithm.</p>
+<dd><p>Gets the currently set parameters for customizing the VOC algorithm.
+This command is named get_voc_parameters in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetVocTuningParameters.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetVocTuningParameters.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -867,7 +874,8 @@ are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxTuningParameters">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">GetNoxTuningParameters</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#GetNoxTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxTuningParameters" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the currently set parameters for customizing the NOx algorithm.</p>
+<dd><p>Gets the currently set parameters for customizing the NOx algorithm.
+This command is named get_nox_parameters in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxTuningParameters.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxTuningParameters.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -893,7 +901,15 @@ are used by the driver class and not intended for direct use.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.StoreNvData">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">StoreNvData</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#StoreNvData"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.StoreNvData" title="Permalink to this definition"></a></dt>
-<dd><p>Stores all algorithm parameters to the non-volatile memory.</p>
+<dd><p>This command stores all parameters previously set with the commands
+set_temperature_offset_for_rht_measurements, set_voc_tuning_parameters and
+set_nox_tuning_parameters to the non-volatile
+memory of SVM4x. These parameters will not be erased
+during reset and will be used by the corresponding algorithms
+after start-up. To reset the storage to factory settings the
+master has to set all parameters to the default values followed
+by a subsequent call of the store_nv_data command.
+This command is named store_input_parameters in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.StoreNvData.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.StoreNvData.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -936,7 +952,8 @@ are used by the driver class and not intended for direct use.</p>
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetVocTuningParameters">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">SetVocTuningParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voc_index_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_offset_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_gain_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gating_max_duration_minutes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain_factor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#SetVocTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetVocTuningParameters" title="Permalink to this definition"></a></dt>
 <dd><p>Sets parameters to customize the VOC algorithm. This command is only available
-in idle mode.</p>
+in idle mode.
+This command is named set_voc_parameters in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetVocTuningParameters.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetVocTuningParameters.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -958,7 +975,8 @@ in idle mode.</p>
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetNoxTuningParameters">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">SetNoxTuningParameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nox_index_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_offset_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">learning_time_gain_hours</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gating_max_duration_minutes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">std_initial</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gain_factor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#SetNoxTuningParameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetNoxTuningParameters" title="Permalink to this definition"></a></dt>
 <dd><p>Sets parameters to customize the NOx algorithm. This command is only available
-in idle mode.</p>
+in idle mode.
+This command is named set_nox_parameters in the datasheet.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetNoxTuningParameters.CMD_ID">
 <span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">96</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetNoxTuningParameters.CMD_ID" title="Permalink to this definition"></a></dt>
@@ -1005,34 +1023,6 @@ initial learning phase. This command is only available during measurement mode.<
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxState">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">GetNoxState</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#GetNoxState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxState" title="Permalink to this definition"></a></dt>
-<dd><p>Gets the current NOx algorithm state. Retrieved values can be used to set the
-NOx algorithm state to resume operation after a short interruption, skipping
-initial learning phase. This command is only available during measurement mode.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxState.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">97</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxState.CMD_ID" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxState.pack">
-<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#GetNoxState.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxState.pack" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxState.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxState.tx" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.GetNoxState.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.GetNoxState.rx" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetVocState">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">SetVocState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#SetVocState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetVocState" title="Permalink to this definition"></a></dt>
 <dd><p>Set previously retrieved VOC algorithm state to resume operation after a short
@@ -1055,53 +1045,6 @@ idle mode.</p>
 
 </dd></dl>
 
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetNoxState">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">SetNoxState</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#SetNoxState"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetNoxState" title="Permalink to this definition"></a></dt>
-<dd><p>Set previously retrieved NOx algorithm state to resume operation after a short
-interruption, skipping initial learning phase. This command is only available in
-idle mode.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetNoxState.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">97</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetNoxState.CMD_ID" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetNoxState.pack">
-<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#SetNoxState.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetNoxState.pack" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.SetNoxState.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.SetNoxState.tx" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.EnterBootloader">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.commands.</span></span><span class="sig-name descname"><span class="pre">EnterBootloader</span></span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#EnterBootloader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.EnterBootloader" title="Permalink to this definition"></a></dt>
-<dd><p>Command to enter into the bootloader mode. The device will reboot into
-bootloader mode and wait until the new Firmware is received (start update
-command expected). Even after a power reset, the device returns into bootloader
-mode. The response frame is sent before the reset.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.EnterBootloader.CMD_ID">
-<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">243</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.EnterBootloader.CMD_ID" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.EnterBootloader.pack">
-<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/commands.html#EnterBootloader.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.commands.EnterBootloader.pack" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="sensirion_uart_svm4x.commands.EnterBootloader.tx">
-<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_uart_svm4x.commands.EnterBootloader.tx" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
 </section>
 <section id="module-sensirion_uart_svm4x.result_types">
 <span id="result-types"></span><h3>Result Types<a class="headerlink" href="#module-sensirion_uart_svm4x.result_types" title="Permalink to this headline"></a></h3>
@@ -1110,7 +1053,7 @@ The generated signal types are used by the driver class and not intended for dir
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalTemperature">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperature_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/result_types.html#SignalTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalTemperature" title="Permalink to this definition"></a></dt>
-<dd><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
+<dd><p>Compensated ambient temperature in degrees celsius.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalTemperature.value">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalTemperature.value" title="Permalink to this definition"></a></dt>
@@ -1121,7 +1064,7 @@ The generated signal types are used by the driver class and not intended for dir
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalHumidity">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalHumidity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">humidity_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/result_types.html#SignalHumidity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalHumidity" title="Permalink to this definition"></a></dt>
-<dd><p>Measured humidity in %RH. The raw value is scaled appropriately.</p>
+<dd><p>Compensated ambient humidity in %RH.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalHumidity.value">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalHumidity.value" title="Permalink to this definition"></a></dt>
@@ -1132,7 +1075,7 @@ The generated signal types are used by the driver class and not intended for dir
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalVocIndex">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalVocIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voc_index_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/result_types.html#SignalVocIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalVocIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Measured VOC Index ticks.</p>
+<dd><p>VOC Index</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalVocIndex.value">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalVocIndex.value" title="Permalink to this definition"></a></dt>
@@ -1143,7 +1086,7 @@ The generated signal types are used by the driver class and not intended for dir
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalNoxIndex">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_uart_svm4x.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalNoxIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nox_index_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_uart_svm4x/result_types.html#SignalNoxIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalNoxIndex" title="Permalink to this definition"></a></dt>
-<dd><p>Measured NOx Index ticks.</p>
+<dd><p>NOx Index</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_uart_svm4x.result_types.SignalNoxIndex.value">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_uart_svm4x.result_types.SignalNoxIndex.value" title="Permalink to this definition"></a></dt>

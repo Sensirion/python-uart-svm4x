@@ -13,7 +13,7 @@ python_requires = '>=3.6, <4'
 install_requires = [
     'sensirion-shdlc-driver~=0.1.5',
     'sensirion-driver-adapters>=2.1.8,<3.0',
-    'sensirion-driver-support-types~=0.2.0',
+    'sensirion-driver-support-types>=1.1.0,<2.0',
 ]
 
 # Packages required for tests and docs

@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--serial-port', '-p', default='COM1')
 args = parser.parse_args()
 
-with ShdlcSerialPort(port=args.serial_port, baudrate=115200) as port:
+with ShdlcSerialPort(port=args.serial_port, baudrate=115200, additional_response_time=0.02) as port:
     channel = ShdlcChannel(port)
     sensor = Svm4xDevice(channel)
     sensor.device_reset()
@@ -44,8 +44,8 @@ with ShdlcSerialPort(port=args.serial_port, baudrate=115200) as port:
           f"protocol_major: {protocol_major}; "
           f"protocol_minor: {protocol_minor}; "
           )
-    t_offset = sensor.get_temperature_offset_for_rht_measurements()
-    print(f"t_offset: {t_offset}; "
+    temperature_offset = sensor.get_temperature_offset_for_rht_measurements()
+    print(f"temperature_offset: {temperature_offset}; "
           )
     sensor.set_temperature_offset_for_rht_measurements(0)
     sensor.start_measurement()

@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--serial-port', '-p', default='COM1')
 args = parser.parse_args()
 
-with ShdlcSerialPort(port=args.serial_port, baudrate=115200) as port:
+with ShdlcSerialPort(port=args.serial_port, baudrate=115200, additional_response_time=0.02) as port:
     channel = ShdlcChannel(port)
     sensor = Svm4xDevice(channel)
     sensor.device_reset()
